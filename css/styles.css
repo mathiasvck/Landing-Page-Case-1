@@ -1,9 +1,34 @@
 /* General Styles */
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 ul {
   list-style: none;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+          'left left main main main'
+          'title title title title title'
+          'footer footer footer footer footer';
+}
+.item-1 {
+  grid-area: left;
+  margin: 0 auto;
+  padding-right: 20rem;
+}
+.item-2 {
+  grid-area: main;
+}
+.item-3 {
+  grid-area: title;
+}
+.item-4 {
+  grid-area: footer;
 }
 /* Header */
 .background {
@@ -27,26 +52,15 @@ h1 {
   font-style: italic;
 } 
 /* Decathlon Partner Top List */
-.container {
-  display: flex;
-}
-.item1 {
-  width: 50%;
-}
-.item2 {
-  width: 50%;
-}
 .titlebox {
   position: relative;
   margin: 0;
   top: 30%;
   left: 25%;
 }
-
 hr.title-orangebar {
   width: 4rem;
   border: 3px solid #ff600a;
-  margin-left: 0;
 }
 .list-item {
   display: flex;
@@ -58,32 +72,39 @@ hr.title-orangebar {
 span {
   font-weight: bold;
 }
-
+.title_text p {
+  margin-top: 0;
+}
+.title_text h2 {
+  margin-bottom: 0;
+}
 /* Title Box Bottom */
-.container-2 {
-  display: flex;
-  flex-direction: column;
-}
-.title-box {
-  margin-bottom: 2rem;
-}
 .title-orange-bar {
-  
   width: 4rem;
   border: 3px solid #ff600a;
 }
 .title-text {
   text-align: center;
 }
-
 /* How does it work, bottom list */
-.flexbox-2 {
+.flexbox {
   display: flex;
   justify-content: space-between;
 }
-.flexbox-2 img {
-  position: relative;
-  left: 4.5rem;
+.list-item1 {
+  background: url(/images/icons/Tracé\ 160.svg) no-repeat 5rem 0px transparent;
+}
+.list-item2 {
+  background: url(/images/icons/icons-standard-cart.svg) no-repeat 5rem 0px transparent;
+}
+.list-item3 {
+  background: url(/images/icons/icons-delivery-purchase-1.svg) no-repeat 5rem 0px transparent;
+}
+.list-item4 {
+  background: url(/images/icons/icons-payment-secured_payment.svg) no-repeat 5rem 0px transparent;
+}
+.list-item5 {
+  background: url(/images/icons/Groupe\ 134.svg) no-repeat 5rem 0px transparent;
 }
 p.number {
   text-align: left;
@@ -96,47 +117,29 @@ p.number {
 .text-content {
   text-align: center;
   width: 239px;
-  position: relative;
+  margin-top: 3em;
 }
 .text {
-  margin: 0;
-  float: right;
   position: relative;
   top: 1.5rem;
 }
-@media screen and (max-width: 720px) {
-  .container {
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+          'left'
+          'main' 
+          'title'
+          'footer';
+  }
+  .flexbox {
     flex-direction: column;
-  }
-  hr.title-orangebar {
-    margin-left: 5rem;
-  }
-  .text-content {
-    text-align: left;
-  }
-  .flexbox-2 {
-    flex-direction: column;
-  }
-  .flexbox-2 li {
-    display: flex;
-  }
-  .flexbox-2 img {
-    position: relative;
-    left: 0.1rem;
-    padding-right: 2rem;
-  }
-  .number {
-    position: relative;
-    top: 0,2rem;
-    left: -6rem;
   }
   .text {
-    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
-  .flexbox-2 img {
-    margin-top: 2em;
-  }
-  .title_text {
-    text-align: center;
+}
+@media screen and (min-width: 600px) {
+  hr.title-orangebar {
+    margin-left: 0;
   }
 }
