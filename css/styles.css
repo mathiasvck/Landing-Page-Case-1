@@ -62,6 +62,12 @@ hr.title-orangebar {
   width: 4rem;
   border: 3px solid #ff600a;
 }
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+}
 .list-item {
   display: flex;
   margin-bottom: 2em;
@@ -87,9 +93,10 @@ span {
   text-align: center;
 }
 /* How does it work, bottom list */
-.flexbox {
+.flexbox2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .list-item1 {
   background: url(/images/icons/Tracé\ 160.svg) no-repeat 5rem 0px transparent;
