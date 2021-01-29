@@ -4,54 +4,44 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
   margin: 0;
 }
 ul {
   list-style: none;
 }
-.grid-container {
-  display: grid;
-  grid-template-areas:
-          'left left main main main'
-          'title title title title title'
-          'footer footer footer footer footer';
-}
-.item-1 {
-  grid-area: left;
-  margin: 0 auto;
-  padding-right: 20rem;
-}
-.item-2 {
-  grid-area: main;
-}
-.item-3 {
-  grid-area: title;
-}
-.item-4 {
-  grid-area: footer;
-}
 /* Header */
 .background {
-  width: 1920px;
-  min-height: 600px;
-  clip-path: polygon(0 43%, 100% 42%, 100% 68%, 0 88%);
-  position: absolute;
-  bottom: 20rem;
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
 }
 header {
-  min-height: 400px;
+  max-height: 820px;
 }
 .header-text {
   position: relative;
-  top: 5rem;
+  bottom: 25rem;
+  z-index: 10;
   color: white;
   text-align: center;
 }
 h1 {
   text-transform: uppercase;
   font-style: italic;
+  font-size: 50px;
 } 
-/* Decathlon Partner Top List */
+/* Container 1 */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+/* Item 1 */
+.item-1 {
+  margin: 5em auto 0 10rem;
+}
 .titlebox {
   position: relative;
   margin: 0;
@@ -62,29 +52,57 @@ hr.title-orangebar {
   width: 4rem;
   border: 3px solid #ff600a;
 }
-.flexbox {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  
-}
-.list-item {
-  display: flex;
-  margin-bottom: 2em;
-}
-.text-partner {
-  padding-left: 2em;
-}
-span {
-  font-weight: bold;
-}
 .title_text p {
   margin-top: 0;
 }
 .title_text h2 {
   margin-bottom: 0;
 }
-/* Title Box Bottom */
+/* Item 2 */
+.item-2 {
+  margin: 5em 18rem 0 auto;
+}
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+.list-item1 {
+  background: url(/images/icons/icons-services-badge.svg) left center no-repeat;
+  min-height: 55px;
+  margin-bottom: 1em;
+} 
+.list-item2 {
+  background: url(/images/icons/icons-delivery-purchase.svg) left center no-repeat;
+  min-height: 55px;
+  margin-bottom: 1em;
+}
+.list-item3 {
+  background: url(/images/icons/Groupe\ 155.svg) left center no-repeat;
+  min-height: 55px;
+  margin-bottom: 1em;
+}
+.list-item4 {
+  background: url(/images/icons/icons-payment-payment.svg) left center no-repeat;
+  min-height: 55px;
+  margin-bottom: 1em;
+}
+.list-item5 {
+  background: url(/images/icons/icons-delivery-home_delivery.svg) left center no-repeat;
+  min-height: 55px;
+}
+.text-partner {
+  padding-left: 4em; 
+}
+span {
+  font-weight: bold;
+}
+/* Container 2 */
+.container2 {
+  display: flex;
+  flex-direction: column;
+}
+/* Item 3 */
 .title-orange-bar {
   width: 4rem;
   border: 3px solid #ff600a;
@@ -92,13 +110,13 @@ span {
 .title-text {
   text-align: center;
 }
-/* How does it work, bottom list */
+/* Item 4 */
 .flexbox2 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.list-item1 {
+/* .list-item1 {
   background: url(/images/icons/Tracé\ 160.svg) no-repeat 5rem 0px transparent;
 }
 .list-item2 {
@@ -112,7 +130,7 @@ span {
 }
 .list-item5 {
   background: url(/images/icons/Groupe\ 134.svg) no-repeat 5rem 0px transparent;
-}
+} */
 p.number {
   text-align: left;
   font-size: 3rem;
@@ -124,25 +142,49 @@ p.number {
 .text-content {
   text-align: center;
   width: 239px;
-  margin-top: 3em;
+  margin-top: 0;
 }
 .text {
   position: relative;
   top: 1.5rem;
+  margin-top: 0;
 }
-@media screen and (max-width: 600px) {
-  .grid-container {
-    grid-template-areas:
-          'left'
-          'main' 
-          'title'
-          'footer';
+@media screen and (max-width: 1200px) {
+  header {
+    max-height: 215px; 
   }
-  .flexbox {
-    flex-direction: column;
+  .header-text {
+    bottom: 10em;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .header-text h2 {
+    font-size: 14px; 
+  }
+  .text-partner {
+    width: 375px;
+    height: auto;
   }
   .text {
     margin-bottom: 2.5rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .item-1 {
+    margin-top: 2em;
+    margin: 0 auto;
+  }
+  .titlebox {
+    text-align: center;
+    margin-right: 11em;
+  }
+  .flexbox {
+    padding: 0;
+  }
+  span {
+    font-weight: normal;
   }
 }
 @media screen and (min-width: 600px) {
