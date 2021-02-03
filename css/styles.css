@@ -149,7 +149,7 @@ p.number {
   top: 1.5rem;
   margin-top: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 699px)  {
   header {
     max-height: 215px; 
   }
@@ -162,15 +162,10 @@ p.number {
   .header-text h2 {
     font-size: 14px; 
   }
-  .text-partner {
-    width: 375px;
-    height: auto;
-  }
-  .text {
-    margin-bottom: 2.5rem;
-  }
   .container {
     flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
   }
   .item-1 {
     margin-top: 2em;
@@ -180,14 +175,66 @@ p.number {
     text-align: center;
     margin-right: 11em;
   }
+  .item-2 {
+    margin-top: 1em;
+  }
   .flexbox {
-    padding: 0;
+    padding: 0.1em;
+    justify-content: center;
+  }
+  .text-partner {
+    width: 360px;
+    height: auto;
+    overflow-wrap: break-word;
   }
   span {
     font-weight: normal;
   }
+  .flexbox2 {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .text {
+    margin-bottom: 2.5rem;
+  }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) and (max-width: 1025px) {
+  hr.title-orangebar {
+    margin-left: 0;
+  }
+  .header-text {
+    position: relative;
+    bottom: 15em;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .header-text h2 {
+    font-size: 20px;
+  }
+  .container {
+    position: relative;
+    top: -10em;
+    margin-left: 2em;
+  }
+  .item-1 {
+    margin: 0 1em;
+  }
+  .item-2 {
+    margin-left: 4em
+  }
+  .text-partner {
+    overflow-wrap: break-word;
+  }
+  .container2 {
+    position: relative;
+    top: -10em;
+  }
+  .text-content {
+    margin-right: 1em;
+  }
+}
+@media screen and (min-width: 1026px) {
   hr.title-orangebar {
     margin-left: 0;
   }
