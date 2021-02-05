@@ -14,14 +14,16 @@ ul {
 .background {
   width: 100%;
   height: auto;
-  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
+  object-fit: cover;
+  object-position: 0px -200px;
+  clip-path: polygon(0 0, 100% 0%, 100% 65%, 0% 90%);
 }
 header {
   max-height: 820px;
 }
 .header-text {
   position: relative;
-  bottom: 25rem;
+  bottom: 30rem;
   z-index: 10;
   color: white;
   text-align: center;
@@ -37,6 +39,8 @@ h1 {
   justify-content: space-between;
   margin-top: 1em;
   margin-bottom: 5em;
+  position: relative;
+  top: -10em;
 }
 /* Item 1 */
 .item-1 {
@@ -101,6 +105,8 @@ span {
 .container2 {
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: -10em;
 }
 /* Item 3 */
 .title-orange-bar {
@@ -150,11 +156,18 @@ p.number {
   margin-top: 0;
 }
 @media screen and (max-width: 699px)  {
+  .background{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 0px -5px;
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 95%);
+  }
   header {
     max-height: 215px; 
   }
   .header-text {
-    bottom: 10em;
+    bottom: 12em; 
   }
   h1 {
     font-size: 22px;
@@ -166,6 +179,7 @@ p.number {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 1em;
+    top: 2em;
   }
   .item-1 {
     margin-top: 2em;
@@ -177,6 +191,9 @@ p.number {
   }
   .item-2 {
     margin-top: 1em;
+  }
+  .container2{
+    top: 2em;
   }
   .flexbox {
     padding: 0.1em;
@@ -199,12 +216,19 @@ p.number {
   }
 }
 @media screen and (min-width: 700px) and (max-width: 1025px) {
+  .background{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 0px -100px;
+    clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 80%);
+  }
   hr.title-orangebar {
     margin-left: 0;
   }
   .header-text {
     position: relative;
-    bottom: 15em;
+    bottom: 20em;
   }
   h1 {
     font-size: 40px;
@@ -214,7 +238,7 @@ p.number {
   }
   .container {
     position: relative;
-    top: -10em;
+    top: -20em;
     margin-left: 2em;
   }
   .item-1 {
@@ -228,7 +252,7 @@ p.number {
   }
   .container2 {
     position: relative;
-    top: -10em;
+    top: -20em;
   }
   .text-content {
     margin-right: 1em;
